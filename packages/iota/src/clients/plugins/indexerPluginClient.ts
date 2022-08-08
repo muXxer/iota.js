@@ -34,7 +34,7 @@ export class IndexerPluginClient {
     }
 
     /**
-     * Find outputs using filter options.
+     * Find basic outputs using filter options.
      * @param filterOptions The options for filtering.
      * @param filterOptions.addressBech32 Filter outputs that are unlockable by the address.
      * @param filterOptions.hasStorageReturnCondition Filter for outputs having a storage return unlock condition.
@@ -83,13 +83,13 @@ export class IndexerPluginClient {
             if (filterOptions.addressBech32 !== undefined) {
                 queryParams.push(`address=${filterOptions.addressBech32}`);
             }
-            if (filterOptions.hasStorageReturnCondition) {
+            if (filterOptions.hasStorageReturnCondition !== undefined) {
                 queryParams.push(`hasStorageReturnCondition=${filterOptions.hasStorageReturnCondition}`);
             }
             if (filterOptions.storageReturnAddressBech32 !== undefined) {
                 queryParams.push(`storageReturnAddress=${filterOptions.storageReturnAddressBech32}`);
             }
-            if (filterOptions.hasExpirationCondition) {
+            if (filterOptions.hasExpirationCondition !== undefined) {
                 queryParams.push(`hasExpirationCondition=${filterOptions.hasExpirationCondition}`);
             }
             if (filterOptions.expirationReturnAddressBech32 !== undefined) {
@@ -287,13 +287,13 @@ export class IndexerPluginClient {
             if (filterOptions.addressBech32 !== undefined) {
                 queryParams.push(`address=${filterOptions.addressBech32}`);
             }
-            if (filterOptions.hasStorageReturnCondition) {
+            if (filterOptions.hasStorageReturnCondition !== undefined) {
                 queryParams.push(`hasStorageReturnCondition=${filterOptions.hasStorageReturnCondition}`);
             }
             if (filterOptions.storageReturnAddressBech32 !== undefined) {
                 queryParams.push(`storageReturnAddress=${filterOptions.storageReturnAddressBech32}`);
             }
-            if (filterOptions.hasExpirationCondition) {
+            if (filterOptions.hasExpirationCondition !== undefined) {
                 queryParams.push(`hasExpirationCondition=${filterOptions.hasExpirationCondition}`);
             }
             if (filterOptions.expirationReturnAddressBech32 !== undefined) {
